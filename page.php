@@ -1,6 +1,6 @@
-<h2>Hola desde page.php<h2>
-
 <?php get_header(); ?>
+
+<h2>Hola desde page.php<h2>
 
 <?php while(have_posts(  )): the_post();?>
 

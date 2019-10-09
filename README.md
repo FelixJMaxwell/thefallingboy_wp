@@ -3,8 +3,8 @@
 
 Se necesitan solo dos archivos para crear un tema personalizado de wordpress.
 
-    - index.php  
-    - style.css  
+    - index.php
+    - style.css
 
 - Se debe seguir la [Jerarquia de temas](https://developer.wordpress.org/themes/basics/template-hierarchy/) para poder crear los archivos necesarios para el tema.
     - **index.php:**    plantilla para la pagina principal, este archivo entrada primero siempre que no exista algun otro por encima.
@@ -42,13 +42,33 @@ Se necesitan solo dos archivos para crear un tema personalizado de wordpress.
         ```
 
 ***Nota***  
-> En los archivos header.php y footer.php se agregan el inicio y finall de las etiquetas html y body, las etiquetas que abren van en header.php y las de cierre van en footer.php
+> En los archivos header.php y footer.php se agregan el inicio y finall de las etiquetas html y body, las etiquetas que abren van en header.php y las de cierre van en footer.php  
 
-``` php
-<?php while(have_posts(  )): the_post();?>
+Ejemplo de las plantillas index, single y page con el header y footer:
+```php
+    <?php get_header(); ?>
 
-    <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
+    <h2>Hola desde page.php<h2>
 
-<?php endwhile; ?>
+    <?php while(have_posts(  )): the_post();?>
+
+        <h1><?php the_title(); ?></h1>
+        <?php the_content(); ?>
+
+    <?php endwhile; ?>
+
+    <?php get_footer(); ?>
 ```
+Se agrega tambien el loop mas utilizado de wordpress: *while(have_posts()): the post();*  
+que permite acceder a diferentes funciones relacionadas con los posts o contenido de las paginas.  
+
+*Funciones disponibles con el loop de wordpress:*
+- Title (the_title())
+- Time (the_time())
+- Categories (the_category())
+
+***functions.php***
+- Archivo para agregar funciones propias del tema, todo lo que no tenga lugar en los diferentes archivos o plantillas.
+    - Menus
+    - CSS
+    - Javascript
