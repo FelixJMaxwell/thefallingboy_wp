@@ -70,5 +70,10 @@ que permite acceder a diferentes funciones relacionadas con los posts o contenid
 ***functions.php***
 - Archivo para agregar funciones propias del tema, todo lo que no tenga lugar en los diferentes archivos o plantillas.
     - Menus
+        - Tener cuidado al declarar el menu, tambien hay que crearlo en las configuraciones con el nombre indicado en la funcion
     - CSS
+        - El archivo styles.css; es decir el principal, se debe cargar desde functions, es posible cargalo desde header.php pero es recomendable hacerlo directamente desde aqui.
     - Javascript
+    - Fuentes
+        - Tambien se pueden agregar desde aca, recomendable usar Google fonts
+- La forma en que se encolan los archivos depende del orden en como se quiere que se carguen a la hora de alguien entre a la pagina
