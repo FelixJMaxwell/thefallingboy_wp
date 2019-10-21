@@ -1,6 +1,11 @@
 <footer class="site-footer">
-    <p>Powered by black holes</p>
+    <p><?php bloginfo('description'); ?></p>
 </footer>
 
-    </body>
+</div> <!-- finaliza main -->
+</div>  <!-- finaliza row -->
+</div> <!-- finaliza container -->
+
+</body>
+
 </html>
