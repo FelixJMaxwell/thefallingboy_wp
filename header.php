@@ -11,18 +11,20 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid principal">
         <div class="row">
             <div class="col-lg-4">
                 <header>
-                    <div class="contenedor">
+                    <div class="contenedor" style="background-image: url('<?php echo get_background_image();?>');">
+                        <div class="imagen_user">
+                            <img src="<?php echo get_theme_mod('imagen1');?>" alt="">
+                        </div>
                         <div class="barra-navegacion">
-                            <img src="<?php background_image(); ?>" alt="fondoh">
                             <?php
                             $args = array(
-                                'theme_location' => 'menu-principal',
+                                'theme_location' => 'menu-header',
                                 'container' => 'nav',
-                                'container-class' => 'menu-principal',
+                                'container-class' => 'menu-header',
                             );
                             wp_nav_menu($args);
                             ?>

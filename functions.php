@@ -31,3 +31,42 @@ $args = array(
     'default-image' => '%1$s/images/background.jpg',
 );
 add_theme_support('custom-background', $args);
+
+function nueva_imagen($wp_customize){
+    $wp_customize->add_section( 'custom_image' , array(
+        'title'    => __( 'Imagenes', 'thefallingboy' ),
+        'priority' => 30
+    ) );   
+
+    $wp_customize->add_setting( 'imagen1' , array(
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'default' => '',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => '',
+        'sanitize_js_callback' => '', // Basically to_json.
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo1', array(
+            'label'      => __( 'Upload a logo', 'theme_name' ),
+            'section'    => 'custom_image',
+            'settings'   => 'imagen1' 
+    ) ) );
+
+    $wp_customize->add_setting( 'imagen2' , array(
+        'type' => 'theme_mod',
+        'capability' => 'edit_theme_options',
+        'default' => '',
+        'transport' => 'refresh', // or postMessage
+        'sanitize_callback' => '',
+        'sanitize_js_callback' => '', // Basically to_json.
+    ) );
+
+    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo2', array(
+            'label'      => __( 'Upload a logo', 'theme_name' ),
+            'section'    => 'custom_image',
+            'settings'   => 'imagen2' 
+    ) ) );
+}
+
+add_action('customize_register', 'nueva_imagen');
