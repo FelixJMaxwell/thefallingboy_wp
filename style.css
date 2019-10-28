@@ -88,13 +88,19 @@ p{
     color: var(--extraRojo);
 }
 
-
-
-
-body{
-    background-color: yellow;
+header{
+    height: 94vh;
 }
 
-.contenedor{
-    background-color: red;
+/* Contenedor principal para el body */
+.main{
+    height: 94vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+.imagen_user img{
+    width: 50%;
+    border-radius: 50%;
 }
