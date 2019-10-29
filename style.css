@@ -69,7 +69,7 @@ h4{
 
 
 
-a{
+a, a:hover, a:visited, a:link, a:active{
     text-decoration: none;
 }
 
@@ -88,19 +88,77 @@ p{
     color: var(--extraRojo);
 }
 
-header{
+
+
+.main-div-section{
+    padding-right: 0;
+}
+
+header, .main{
+    /* vh es para vertical height en medidas viewport */
     height: 94vh;
+}
+
+header{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header img{
+    width: 50%;
+    border-radius: 50%;
 }
 
 /* Contenedor principal para el body */
 .main{
-    height: 94vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    padding: 0;
 }
 
+.main-contenido{
+    margin-left: 15px
+}
 
-.imagen_user img{
-    width: 50%;
-    border-radius: 50%;
+.menu-header{
+    margin-top: 15px;
+}
+
+.menu-principal{
+    font-family: var(--fuentePrincipal);
+
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F25749;
+}
+
+.menu-principal li{
+    display: inline-block;
+    margin: 0 35px;
+}
+
+.menu-principal a, a:hover, a:visited, a:link, a:active{
+    color: var(--blanco);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }

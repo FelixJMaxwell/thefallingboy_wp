@@ -13,21 +13,32 @@
 
     <div class="container-fluid principal">
         <div class="row">
-            <div class="col-lg-4">
-                <header style="background-image: url('<?php echo get_background_image(); ?>');">
-                    <div class="imagen_user text-center">
+            <div class="col-lg-3 main-div-section">
+                <header style="background-image: url('<?php echo get_background_image(); ?>');" class="text-center d-flex justify-content-center flex-column">
+                    <div class="img-perfil">
                         <img src="<?php echo get_theme_mod('imagen2'); ?>" alt="test">
                     </div>
-                    <div class="barra-navegacion">
+                    <div class="menu-sidebar">
                         <?php
                         $args = array(
                             'theme_location' => 'menu-header',
                             'container' => 'nav',
-                            'container-class' => 'menu-header',
+                            'container_class' => 'menu-header',
                         );
                         wp_nav_menu($args);
                         ?>
                     </div>
                 </header>
             </div>
-            <div class="main col-lg-8">
+            <div class="main col-lg-9">
+                <div class="menu-main-section">
+                    <?php
+                    $args = array(
+                        'theme_location' => 'menu-principal',
+                        'container' => 'nav',
+                        'container_class' => 'menu-principal',
+                    );
+                    wp_nav_menu($args);
+                    ?>
+                </div>
+                <div class="main-contenido">
