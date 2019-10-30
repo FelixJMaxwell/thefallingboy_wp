@@ -14,6 +14,8 @@ add_action( 'init', 'tfb_blog_menu' );
 
 
 
+
+
 function tfb_scripts_styles(){
     wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css', array(), '8.0.1');
 
@@ -28,6 +30,9 @@ function tfb_scripts_styles(){
 }
 
 add_action('wp_enqueue_scripts', 'tfb_scripts_styles',);
+
+
+
 
 
 $args = array(

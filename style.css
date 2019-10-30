@@ -32,6 +32,7 @@ html{
 
 *, *:before, *:after{
     box-sizing: inherit;
+    padding: 0 !important;
 }
 
 body{
@@ -79,20 +80,11 @@ ul{
     padding: 0;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
 p{
     color: var(--extraRojo);
 }
 
 
-
-.main-div-section{
-    padding-right: 0;
-}
 
 header, .main{
     /* vh es para vertical height en medidas viewport */
@@ -122,6 +114,7 @@ header img{
 
 .menu-header{
     margin-top: 15px;
+    font-family: var(--fuenteSecundaria);
 }
 
 .menu-principal{
