@@ -31,14 +31,12 @@
                 </header>
             </div>
             <div class="main col-lg-9">
-                <div class="menu-main-section">
-                    <?php
-                    $args = array(
-                        'theme_location' => 'menu-principal',
-                        'container' => 'nav',
-                        'container_class' => 'menu-principal',
-                    );
-                    wp_nav_menu($args);
-                    ?>
-                </div>
+                <?php
+                $args = array(
+                    'theme_location' => 'menu-principal',
+                    'container' => 'nav',
+                    'container_class' => 'menu-principal',
+                );
+                wp_nav_menu($args);
+                ?>
                 <div class="main-contenido">

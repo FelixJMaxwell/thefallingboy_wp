@@ -41,7 +41,11 @@ body{
     line-height: 2;
     font-family: var(--fuenteSecundaria);
     
-    margin: 25px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 92vh;
 }
 
 h1,h2,h3,h4{
@@ -109,6 +113,7 @@ header img{
 }
 
 .main-contenido{
+    margin-top: 60px;
     margin-left: 15px
 }
 
@@ -118,6 +123,10 @@ header img{
 }
 
 .menu-principal{
+    position: fixed;
+    top: 15px;
+    width: 73.8%;
+
     font-family: var(--fuentePrincipal);
 
     height: 50px;
