@@ -13,9 +13,9 @@
     - Se despliega todo por orden de fecha
     - Buscar una mejor forma de esplegar la información o diferentes publicaciones aqui
     
-    - Remover el menu encima de esta seccion (?)
-    - Agregarlo directamente sobre el header/sidebar
 - Menu de secciones en la parte de arriba de la seccion principal
+    - Remover el menu encima de esta seccion (?)
+        - Agregarlo directamente sobre el header/sidebar
     - Pagina principal
     - Seccion de imagenes
         - Buscar como restringir ciertas cosas
