@@ -2,10 +2,6 @@
 
 function tfb_blog_menu() {
     register_nav_menus(array(
-        'menu-principal' => __( 'Menu Principal', 'thefallingboy_blog' )
-    ));
-
-    register_nav_menus(array(
         'menu-header' => __('Menu Header', 'thefalllingboy_blog')
     ));
 }

@@ -32,7 +32,7 @@ html{
 
 *, *:before, *:after{
     box-sizing: inherit;
-    padding: 0 !important;
+    /* padding: 0 !important; */
 }
 
 body{
@@ -42,10 +42,8 @@ body{
     font-family: var(--fuenteSecundaria);
     
     margin-top: 15px;
-    margin-bottom: 0;
     margin-left: 20px;
     margin-right: 20px;
-    height: 92vh;
 }
 
 h1,h2,h3,h4{
@@ -112,8 +110,11 @@ header img{
     padding: 0;
 }
 
+.main-div-section{
+    padding-right: 0;
+}
+
 .main-contenido{
-    margin-top: 60px;
     margin-left: 15px
 }
 
