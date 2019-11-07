@@ -9,8 +9,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
-
+<body <?php body_class(); ?>>
     <div class="container-fluid principal">
         <div class="row">
             <div class="col-lg-3 main-div-section">
