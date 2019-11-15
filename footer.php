@@ -1,12 +1,12 @@
-</div> <!-- finaliza main-contenido -->
+</div>
 
 <footer class="site-footer">
     <p><?php bloginfo('description'); ?></p>
 </footer>
 
-</div> <!-- finaliza main -->
-</div> <!-- finaliza row -->
-</div> <!-- finaliza container -->
+</div>
+</div>
+</div>
 </body>
 
 </html>

@@ -25,49 +25,9 @@
     --blanco: #FFFFFF;
 }
 
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-}
-
-*, *:before, *:after{
-    box-sizing: inherit;
-    /* padding: 0 !important; */
-}
-
 body{
-    font-size: 16px;
-    font-size: 1.6rem;
-    line-height: 2;
-    font-family: var(--fuenteSecundaria);
-    
-    margin-top: 15px;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-h1,h2,h3,h4{
-    font-family: var(--fuentePrincipal);
-    color: var(--rojoOscuro);
-    line-height: 1.2;
-    margin: 1rem 0;
-}
-
-h2,h3,h4{
-    color: var(--extraRojo);
-}
-
-h1{
-    font-size: 6rem;
-}
-h2{
-    font-size: 4.8rem;
-}
-h3{
-    font-size: 3.6rem;
-}
-h4{
-    font-size: 2.4rem;
 }
 
 

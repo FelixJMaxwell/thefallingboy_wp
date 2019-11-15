@@ -47,7 +47,7 @@ function nueva_imagen($wp_customize){
     ) );   
 
     //Imagen para el fondo del header
-    $wp_customize->add_setting( 'imagen1' , array(
+    $wp_customize->add_setting( 'background_image' , array(
         'type' => 'theme_mod',
         'capability' => 'edit_theme_options',
         'default' => '',
@@ -59,11 +59,11 @@ function nueva_imagen($wp_customize){
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo1', array(
             'label'      => __( 'Imagen para el background', 'theme_name' ),
             'section'    => 'custom_image',
-            'settings'   => 'imagen1' 
+            'settings'   => 'background_image' 
     ) ) );
 
     //Imagen del usuario
-    $wp_customize->add_setting( 'imagen2' , array(
+    $wp_customize->add_setting( 'profile_image' , array(
         'type' => 'theme_mod',
         'capability' => 'edit_theme_options',
         'default' => '',
@@ -75,7 +75,7 @@ function nueva_imagen($wp_customize){
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo2', array(
             'label'      => __( 'Imagen de perfil', 'theme_name' ),
             'section'    => 'custom_image',
-            'settings'   => 'imagen2' 
+            'settings'   => 'profile_image' 
     ) ) );
 }
 
