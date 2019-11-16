@@ -10,100 +10,83 @@
     Tags: blog, personal, imagenes, texto, novela, proyectos
     Text Domain: thefallingboy_blog
 */
-
-:root{
-    /** FUENTES **/
-    --fuentePrincipal   : 'Anton', sans-serif;
-    --fuenteTexto       : 'Libre Franklin', sans-serif;
-    --fuenteSecundaria  : 'Roboto Condensed', sans-serif;
-
-    /** Colores **/
-    --colorPrimario: #F01400;
-    --rojoOscuro: #4D0600;
-    --rojoClaro: #F25749;
-    --extraRojo: #BD1000;
-    --blanco: #FFFFFF;
+:root {
+  /** FUENTES **/
+  --fuentePrincipal: 'Anton', sans-serif;
+  --fuenteTexto: 'Libre Franklin', sans-serif;
+  --fuenteSecundaria: 'Roboto Condensed', sans-serif;
+  /** Colores **/
+  --colorPrimario: #F01400;
+  --rojoOscuro: #4D0600;
+  --rojoClaro: #F25749;
+  --extraRojo: #BD1000;
+  --blanco: #FFFFFF;
 }
 
-body{
-    margin-left: 20px;
-    margin-right: 20px;
+body {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-
-
-a, a:hover, a:visited, a:link, a:active{
-    text-decoration: none;
+a, a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
 }
 
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-p{
-    color: var(--extraRojo);
+p {
+  color: var(--extraRojo);
 }
 
-
-
-header, .main{
-    /* vh es para vertical height en medidas viewport */
-    height: 94vh;
+header, .main {
+  /* vh es para vertical height en medidas viewport */
+  height: 94vh;
 }
 
-header{
-    background-repeat: no-repeat;
-    background-size: cover;
+header {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-header img{
-    width: 50%;
-    border-radius: 50%;
+header img {
+  width: 50%;
+  border-radius: 50%;
 }
 
 /* Contenedor principal para el body */
-.main{
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 0;
+.main {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+  background-color: white;
 }
 
-.main-div-section{
-    padding-right: 0;
+.main-div-section {
+  padding-right: 0;
 }
 
-.main-contenido{
-    margin-left: 15px
+.menu-header {
+  margin-top: 15px;
+  font-family: var(--fuenteSecundaria);
 }
 
-.menu-header{
-    margin-top: 15px;
-    font-family: var(--fuenteSecundaria);
+.menu-header {
+  font-family: var(--fuentePrincipal);
 }
 
-.menu-principal{
-    position: fixed;
-    top: 15px;
-    width: 73.8%;
-
-    font-family: var(--fuentePrincipal);
-
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #F25749;
+.menu-header li {
+  margin: 5px 0;
+  display: inline-block;
+  width: 120px;
+  text-align: center;
 }
 
-.menu-principal li{
-    display: inline-block;
-    margin: 0 35px;
-}
-
-.menu-principal a, a:hover, a:visited, a:link, a:active{
-    color: var(--blanco);
+.menu-header a, .menu-header a:hover, .menu-header a:visited, .menu-header a:link, .menu-header a:active {
+  color: var(--blanco);
 }
 
 /* width */
@@ -113,15 +96,16 @@ header img{
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
+/*# sourceMappingURL=style.css.map */

@@ -40,14 +40,14 @@ add_theme_support( 'custom-background', $defaults );
 
 
 
-function nueva_imagen($wp_customize){
+function customizer_seccions($wp_customize){
     $wp_customize->add_section( 'custom_image' , array(
         'title'    => __( 'Imagenes', 'thefallingboy' ),
         'priority' => 30
     ) );   
 
     //Imagen para el fondo del header
-    $wp_customize->add_setting( 'background_image' , array(
+    $wp_customize->add_setting( 'header_image' , array(
         'type' => 'theme_mod',
         'capability' => 'edit_theme_options',
         'default' => '',
@@ -57,9 +57,9 @@ function nueva_imagen($wp_customize){
     ) );
 
     $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo1', array(
-            'label'      => __( 'Imagen para el background', 'theme_name' ),
+            'label'      => __( 'Imagen para el header', 'theme_name' ),
             'section'    => 'custom_image',
-            'settings'   => 'background_image' 
+            'settings'   => 'header_image' 
     ) ) );
 
     //Imagen del usuario
@@ -79,4 +79,4 @@ function nueva_imagen($wp_customize){
     ) ) );
 }
 
-add_action('customize_register', 'nueva_imagen');
+add_action('customize_register', 'customizer_seccions');

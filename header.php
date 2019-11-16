@@ -13,7 +13,8 @@
     <div class="container-fluid principal">
         <div class="row">
             <div class="col-lg-3 main-div-section">
-                <header style="background-image: url('<?php echo get_theme_mod('background_image'); ?>');" class="text-center d-flex justify-content-center flex-column">
+                <header style="background-image: url('<?php echo get_theme_mod('header_image'); ?>');" 
+                                                class="text-center d-flex justify-content-center flex-column">
                     <div class="img-perfil">
                         <img src="<?php echo get_theme_mod('profile_image'); ?>" alt="test">
                     </div>
