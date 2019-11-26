@@ -4,40 +4,41 @@
 <div class="main-index">
     <h1>Index.php</h1>
 
-    <?php
-if ( get_query_var('paged') ) {
-	$paged = get_query_var('paged');
-} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
-	$paged = get_query_var('page');
-} else {
-	$paged = 1;
-}
- 
-$custom_query_args = array(
-	'post_type' => 'post', 
-	'posts_per_page' => get_option('posts_per_page'),
-	'paged' => $paged,
-	'post_status' => 'publish',
-	'ignore_sticky_posts' => true,
-	//'category_name' => 'custom-cat',
-	'order' => 'DESC', // 'ASC'
-	'orderby' => 'date' // modified | title | name | ID | rand
-);
-$custom_query = new WP_Query( $custom_query_args );
- 
-if ( $custom_query->have_posts() ) :
-	while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
- 
-		<article <?php post_class(); ?>>
-			<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-			<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
-			<div><?php the_excerpt(); ?></div>
-		</article>
- 
+<?php
+	if ( get_query_var('paged') ) {
+		$paged = get_query_var('paged');
+	} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
+		$paged = get_query_var('page');
+	} else {
+		$paged = 1;
+	}
+	
+	$custom_query_args = array(
+		'post_type' => 'post', 
+		'posts_per_page' => get_option('posts_per_page'),
+		'paged' => $paged,
+		'post_status' => 'publish',
+		'ignore_sticky_posts' => true,
+		//'category_name' => 'custom-cat',
+		'order' => 'DESC', // 'ASC'
+		'orderby' => 'date' // modified | title | name | ID | rand
+	);
+
+	$custom_query = new WP_Query( $custom_query_args );
+	
+	if ( $custom_query->have_posts() ) :
+		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+
+			<article <?php post_class(); ?>>
+				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+				<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></small>
+				<div><?php the_excerpt(); ?></div>
+			</article>
+
 	<?php
 	endwhile;
 	?>
-	
+		
 	<?php if ($custom_query->max_num_pages > 1) : // custom pagination  ?>
 		<?php
 		$orig_query = $wp_query; // fix for pagination to work
