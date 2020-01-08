@@ -49,14 +49,14 @@
 					));
 
 					if ( empty($images) ) {
-						// no attachments here}
 						$the_excerpt = apply_filters('the_excerpt', get_the_excerpt());
 						
 						echo '<div class="the_excerpt">'.__($the_excerpt).'</div>';
 					} else {
 						echo '<div class="post-imagenes">';
 						foreach ( $images as $attachment_id => $attachment ) {
-							echo wp_get_attachment_image( $attachment_id, 'thumbnail' );
+							/* echo wp_get_attachment_image( $attachment_id, 'thumbnail' ); */
+							echo '<a href="'. get_permalink() . '">'. wp_get_attachment_image($attachment_id,  array( "class" => "thumbnail-img" )) .'</a>';
 						}
 						echo '</div>';
 					}
