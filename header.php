@@ -16,7 +16,7 @@
                 <header style="background-image: url('<?php echo get_theme_mod('header_image'); ?>');" 
                                                 class="text-center d-flex justify-content-center flex-column">
                     <div class="img-perfil">
-                        <img src="<?php echo get_theme_mod('profile_image'); ?>" alt="test">
+                        <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_theme_mod('profile_image'); ?>" alt="test"></a>
                     </div>
                     <div class="menu-sidebar">
                         <?php

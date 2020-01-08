@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
-<h1>Hola desde single.php</h1>
+<!-- <h1>Hola desde single.php</h1> -->
 
 <?php while(have_posts(  )): the_post();?>
 
-    <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
+    <?php if (in_category('imagenes')) : ?>
+        <div class="post-imagenes">
+            <?php the_content() ?>
+        </div>
+    <?php endif; ?>
 
 <?php endwhile; ?>
-
-<?php get_footer(); ?>
