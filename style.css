@@ -103,13 +103,20 @@ header img {
   height: 244px;
 }
 
+.post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .post p, .post small {
+  padding-left: 5px;
+}
+
 .post-imagenes ul li {
   margin: 0 !important;
 }
 
 .site-footer {
   text-align: center;
-  background-color: #000000;
+  background-color: #00000045;
+  position: absolute;
+  bottom: 0;
+  width: 96.4%;
 }
 
 .site-footer p {

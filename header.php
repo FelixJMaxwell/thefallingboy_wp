@@ -28,6 +28,9 @@
                         wp_nav_menu($args);
                         ?>
                     </div>
+                    <footer class="site-footer">
+                    <p><?php bloginfo('description'); ?></p>
+                    </footer>
                 </header>
             </div>
             <div class="main col-lg-9">

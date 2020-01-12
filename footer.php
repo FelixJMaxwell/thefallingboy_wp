@@ -1,12 +1,19 @@
+<!-- Cierra main-contenido -->
 </div>
+<!-- Cierra main-contenido -->
 
-<footer class="site-footer">
-    <p><?php bloginfo('description'); ?></p>
-</footer>
+<!-- Cierra main col-lg-9 -->
+</div>
+<!-- Cierra main col-lg-9 -->
 
+<!-- cierra row -->
 </div>
+<!-- cierra row -->
+
+<!-- Cierra container-fluid principal -->
 </div>
-</div>
+<!-- Cierra container-fluid principal -->
+
 </body>
 
 </html>
