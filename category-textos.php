@@ -27,20 +27,7 @@
 	
 	if ( $custom_query->have_posts() ) :
 		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-
-			<article <?php post_class(); ?>>
-				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-				<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?> on 
-                    <a href="<?php echo esc_url( $category_link ); ?>" 
-                        title="category-<?php single_cat_title() ?>"> <?php single_cat_title() ?> </a></small>
-                        
-                        <?php 
-                            $the_excerpt = apply_filters('the_excerpt', get_the_excerpt());
-                            echo '<div class="the_excerpt">'.__($the_excerpt).'</div>';
-                        ?>
-
-			</article>
-
+			<?php get_template_part('partials/content', 'contenido'); ?>
 	<?php
 	endwhile;
 	?>

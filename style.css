@@ -72,6 +72,11 @@ header img {
   padding: 0;
   background-color: white;
   background: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.main-index {
+  margin: 0 15px;
 }
 
 .main-div-section {
@@ -84,6 +89,7 @@ header img {
 }
 
 .menu-header {
+  background-color: #00000045;
   font-family: var(--fuentePrincipal);
 }
 
@@ -103,6 +109,11 @@ header img {
   height: 244px;
 }
 
+.post {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .post p, .post small {
   padding-left: 5px;
 }
@@ -111,12 +122,35 @@ header img {
   margin: 0 !important;
 }
 
+.post-texto {
+  width: 25%;
+  margin: 0 auto;
+}
+
+.category-textos {
+  width: 100%;
+}
+
+.category-textos .informacion-post {
+  margin: 0 15px;
+}
+
+.category-textos .informacion-post .post-informacion {
+  text-align: right;
+  padding: 35px 10px 0 0;
+  background-color: rgba(177, 177, 177, 0.5);
+}
+
+.category-textos .informacion-post .post-contenido {
+  text-align: left;
+  padding: 35px 0 35px 10px;
+  background-color: rgba(61, 61, 61, 0.75);
+}
+
 .site-footer {
   text-align: center;
   background-color: #00000045;
-  position: absolute;
-  bottom: 0;
-  width: 96.4%;
+  widows: 100%;
 }
 
 .site-footer p {
@@ -124,9 +158,15 @@ header img {
   padding: 5px 0 5px 0;
 }
 
+.separator {
+  margin: 15px 0;
+  height: 10px;
+  background-color: white;
+}
+
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 20px;
 }
 
 /* Track */

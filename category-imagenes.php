@@ -3,7 +3,7 @@
 <div class="main-index">
     <h1>category-imagenes.php</h1>
 
-<!-- <?php
+<?php
 	if ( get_query_var('paged') ) {
 		$paged = get_query_var('paged');
 	} elseif ( get_query_var('page') ) { // 'page' is used instead of 'paged' on Static Front Page
@@ -16,7 +16,7 @@
 		'post_type' => 'post', 
 		'posts_per_page' => get_option('posts_per_page'),
 		'paged' => $paged,
-		'post_status' => 'publish',
+		'post_status' => '',
 		'ignore_sticky_posts' => true,
 		'category_name' => 'imagenes',
 		'order' => 'DESC', // 'ASC'
@@ -27,24 +27,7 @@
 	
 	if ( $custom_query->have_posts() ) :
 		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-			<article <?php post_class(); ?>>
-				<?php
-					$images =& get_children( array (
-						'post_parent' 		=> $post->ID,
-						'post_mime_type' 	=> 'image',
-					));
-
-					echo '<div class="post-imagenes">';
-					foreach ( $images as $attachment_id => $attachment ) {
-						/* echo wp_get_attachment_image( $attachment_id, 'thumbnail' ); */
-						echo '<a href="'. get_permalink() . '">'. wp_get_attachment_image($attachment_id,  array( "class" => "thumbnail-img" )) .'</a>';
-					}
-					echo '</div>';
-
-					$media = get_attached_media( 'image' );
-				?>
-			</article>
-
+			<?php get_template_part('partials/content', 'contenido'); ?>
 		<?php
 		endwhile;
 		?>
@@ -72,47 +55,6 @@
 else:
 	echo '<p>'.__('Sorry, no posts matched your criteria.').'</p>';
 endif;
-?> -->
-
-
-<?php 
-	$custom_query_args = array(
-		'post_type' => 'post', 
-		'posts_per_page' => get_option('posts_per_page'),
-		'paged' => $paged,
-		'post_status' => 'publish',
-		'ignore_sticky_posts' => true,
-		'category_name' => 'imagenes',
-		'order' => 'DESC', // 'ASC'
-		'orderby' => 'date' // modified | title | name | ID | rand
-	);
-
-	$custom_query = new WP_Query( $custom_query_args );
-
-	if ( $custom_query->have_posts() ) :
-		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-			<article <?php post_class(); ?>>
-			<?php
-				$images =& get_children( array(
-					'post_parent' 		=> get_the_ID(),
-					'post_type'      	=> 'attachment',
-					'post_mime_type' 	=> 'image'
-				));
-				 
-				if ( empty( $images ) ) {
-					// no attachments here
-				} else {
-					foreach ( $images as $attachment_id => $attachment ) {
-						echo wp_get_attachment_image( $attachment_id, 'full' );
-					}
-				}
-			?>
-			</article>
-
-		<?php
-		endwhile;
-		?>
-
-	<?php endif; ?>	
+?>
 
 </div>
