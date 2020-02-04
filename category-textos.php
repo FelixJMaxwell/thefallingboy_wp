@@ -25,12 +25,12 @@
 
 	$custom_query = new WP_Query( $custom_query_args );
 	
+	/*  Se muestra el contenido del post en turno
+	el codigo esta contenido dentro de partials/content */
 	if ( $custom_query->have_posts() ) :
 		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 			<?php get_template_part('partials/content', 'contenido'); ?>
-	<?php
-	endwhile;
-	?>
+	<?php endwhile; ?>
 		
 	<?php if ($custom_query->max_num_pages > 1) : // custom pagination  ?>
 		<?php
