@@ -128,27 +128,30 @@ header img{
     }
 }
 
-.post-texto{
-    width: 25%;
-    margin: 0 auto;
+.main-contenido{
+    height: 100%;
+
+    .post-textos-single{
+        height: 100%;
+        
+        .row-text-post-single{
+            height: 100%;
+        }
+    }
 }
 
 .category-textos{
-    width: 100%;
+    height: 100%;
 
-    .informacion-post{
-        margin: 0 15px;
-
-        .post-informacion{
-            text-align: right;
-            padding: 35px 10px 0 0;
-            background-color: rgba(177, 177, 177, 0.5);
-        }
-        .post-contenido{
-            text-align: left;
-            padding: 35px 0 35px 10px;
-            background-color: rgba(61, 61, 61, 0.75);
-        }
+    .post-informacion{
+        text-align: right;
+        padding: 35px 10px 0 0;
+        background-color: rgba(177, 177, 177, 0.5);
+    }
+    .post-contenido{
+        text-align: left;
+        padding: 35px 50px 35px 10px;
+        background-color: rgba(61, 61, 61, 0.75);
     }
 }
 
