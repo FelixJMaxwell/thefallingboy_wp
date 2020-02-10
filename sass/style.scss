@@ -140,8 +140,9 @@ header img{
     }
 }
 
-.category-textos{
+.category-textos, .category-proyecto{
     height: 100%;
+    width: 100%;
 
     .post-informacion{
         text-align: right;
@@ -152,6 +153,16 @@ header img{
         text-align: left;
         padding: 35px 50px 35px 10px;
         background-color: rgba(61, 61, 61, 0.75);
+    }
+
+    .post-informacion-inside{
+        position: fixed;
+        height: 100vh;
+    }
+
+    .post-contenido-inside{
+        position: absolute;
+        right: 0;
     }
 }
 

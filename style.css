@@ -134,20 +134,31 @@ header img {
   height: 100%;
 }
 
-.category-textos {
+.category-textos, .category-proyecto {
   height: 100%;
+  width: 100%;
 }
 
-.category-textos .post-informacion {
+.category-textos .post-informacion, .category-proyecto .post-informacion {
   text-align: right;
   padding: 35px 10px 0 0;
   background-color: rgba(177, 177, 177, 0.5);
 }
 
-.category-textos .post-contenido {
+.category-textos .post-contenido, .category-proyecto .post-contenido {
   text-align: left;
   padding: 35px 50px 35px 10px;
   background-color: rgba(61, 61, 61, 0.75);
+}
+
+.category-textos .post-informacion-inside, .category-proyecto .post-informacion-inside {
+  position: fixed;
+  height: 100vh;
+}
+
+.category-textos .post-contenido-inside, .category-proyecto .post-contenido-inside {
+  position: absolute;
+  right: 0;
 }
 
 .site-footer {
