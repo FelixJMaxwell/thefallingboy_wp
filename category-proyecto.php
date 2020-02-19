@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main-index">
-    <!-- <h1>category-imagenes.php</h1> -->
+    <!-- <h1>category-textos.php</h1> -->
 
 <?php
 	if ( get_query_var('paged') ) {
@@ -16,32 +16,31 @@
 		'post_type' => 'post', 
 		'posts_per_page' => get_option('posts_per_page'),
 		'paged' => $paged,
-		'post_status' => '',
+		'post_status' => 'publish',
 		'ignore_sticky_posts' => true,
-		'category_name' => 'imagenes',
+		'category_name' => 'proyecto',
 		'order' => 'DESC', // 'ASC'
 		'orderby' => 'date' // modified | title | name | ID | rand
 	);
 
 	$custom_query = new WP_Query( $custom_query_args );
 	
+	/*  Se muestra el contenido del post en turno
+	el codigo esta contenido dentro de partials/content */
 	if ( $custom_query->have_posts() ) :
 		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 			<article <?php post_class(); ?>>
-				<?php if(in_category('imagenes')) : ?>
-					<?php
-						$images =& get_children( array (
-							'post_parent' => $post->ID,
-							'post_type' => 'attachment',
-							'post_mime_type' => 'image'
-						));
+				<?php if(in_category('proyecto')) : ?>
+					<div class="row">
+						<div class="col-6 post-informacion">
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?> on <?php the_category('-'); ?></small>
+						</div>
 
-						if ( !empty($images) ) {
-							echo '<div class="post-imagenes">';
-								the_content();
-							echo '</div>';
-						}
-					?>
+						<div class="col-6 post-contenido">
+							<?php the_content(); ?>
+						</div>
+					</div>
 				<?php endif; ?>
 				</article>
 
@@ -57,8 +56,7 @@
 		?>
 		<nav class="prev-next-posts">
 			<div class="prev-posts-link">
-				<?php echo get_next_posts_link( 'Older Entries', 
-					$custom_query->max_num_pages ); ?>
+				<?php echo get_next_posts_link( 'Older Entries', $custom_query->max_num_pages ); ?>
 			</div>
 			<div class="next-posts-link">
 				<?php echo get_previous_posts_link( 'Newer Entries' ); ?>
@@ -75,5 +73,6 @@ else:
 	echo '<p>'.__('Sorry, no posts matched your criteria.').'</p>';
 endif;
 ?>
+
 
 </div>

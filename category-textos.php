@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main-index">
-    <h1>category-textos.php</h1>
+    <!-- <h1>category-textos.php</h1> -->
 
 <?php
 	if ( get_query_var('paged') ) {
@@ -29,7 +29,24 @@
 	el codigo esta contenido dentro de partials/content */
 	if ( $custom_query->have_posts() ) :
 		while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
-			<?php get_template_part('partials/content', 'contenido'); ?>
+			<article <?php post_class(); ?>>
+				<?php if(in_category('textos')) : ?>
+					<div class="row">
+						<div class="col-6 post-informacion">
+							<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+							<small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?> on <?php the_category('-'); ?></small>
+						</div>
+
+						<div class="col-6 post-contenido">
+							<?php the_content(); ?>
+						</div>
+					</div>
+				<?php endif; ?>
+				</article>
+
+				<div class="col-12">
+				<div class="separator"></div>
+			</div>
 	<?php endwhile; ?>
 		
 	<?php if ($custom_query->max_num_pages > 1) : // custom pagination  ?>

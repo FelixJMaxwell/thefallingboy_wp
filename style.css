@@ -110,8 +110,8 @@ header img {
 }
 
 .post {
-  padding-right: 10px;
-  padding-left: 10px;
+  /* padding-right: 10px;
+    padding-left: 10px; */
 }
 
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6, .post p, .post small {
@@ -126,39 +126,79 @@ header img {
   height: 100%;
 }
 
-.main-contenido .post-textos-single {
+.main-contenido .post-textos-single,
+.main-contenido .post-uncategorized-single {
   height: 100%;
 }
 
-.main-contenido .post-textos-single .row-text-post-single {
+.main-contenido .post-textos-single .row-text-post-single,
+.main-contenido .post-textos-single .row-uncategorized-post-single,
+.main-contenido .post-uncategorized-single .row-text-post-single,
+.main-contenido .post-uncategorized-single .row-uncategorized-post-single {
   height: 100%;
 }
 
-.category-textos, .category-proyecto {
+.pagina-principal {
   height: 100%;
   width: 100%;
 }
 
-.category-textos .post-informacion, .category-proyecto .post-informacion {
+.pagina-principal .post-informacion {
   text-align: right;
   padding: 35px 10px 0 0;
   background-color: rgba(177, 177, 177, 0.5);
 }
 
-.category-textos .post-contenido, .category-proyecto .post-contenido {
+.pagina-principal .post-informacion .posicion-informacion {
+  position: fixed;
+  left: 42%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.pagina-principal .post-contenido {
   text-align: left;
   padding: 35px 50px 35px 10px;
   background-color: rgba(61, 61, 61, 0.75);
 }
 
-.category-textos .post-informacion-inside, .category-proyecto .post-informacion-inside {
-  position: fixed;
-  height: 100vh;
+.category-textos,
+.category-imagenes,
+.category-proyectos,
+.category-uncategorized,
+.category-proyecto {
+  height: 100%;
 }
 
-.category-textos .post-contenido-inside, .category-proyecto .post-contenido-inside {
-  position: absolute;
-  right: 0;
+.category-textos .post-informacion,
+.category-imagenes .post-informacion,
+.category-proyectos .post-informacion,
+.category-uncategorized .post-informacion,
+.category-proyecto .post-informacion {
+  text-align: right;
+  padding: 35px 10px 0 0;
+  background-color: rgba(177, 177, 177, 0.5);
+}
+
+.category-textos .post-informacion .posicion-informacion,
+.category-imagenes .post-informacion .posicion-informacion,
+.category-proyectos .post-informacion .posicion-informacion,
+.category-uncategorized .post-informacion .posicion-informacion,
+.category-proyecto .post-informacion .posicion-informacion {
+  position: fixed;
+  left: 42%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.category-textos .post-contenido,
+.category-imagenes .post-contenido,
+.category-proyectos .post-contenido,
+.category-uncategorized .post-contenido,
+.category-proyecto .post-contenido {
+  text-align: left;
+  padding: 35px 50px 35px 10px;
+  background-color: rgba(61, 61, 61, 0.75);
 }
 
 .site-footer {

@@ -29,7 +29,7 @@
 				if ( $custom_query->have_posts() ) :
 					while( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
 
-						<?php get_template_part('partials/content', 'contenido'); ?>
+						<?php get_template_part('partials/content', 'contenido-principal'); ?>
 
 					<?php
 					endwhile;

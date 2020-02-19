@@ -1,12 +1,12 @@
-<article <?php post_class(); ?>>
+<article <?php post_class("pagina-principal"); ?>>
     <?php if(in_category('textos')) : ?>
         <div class="row">
-            <div class="col-lg-6 post-informacion">
+            <div class="col-6 post-informacion">
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?> on <?php the_category('-'); ?></small>
             </div>
 
-            <div class="col-lg-6 post-contenido">
+            <div class="col-6 post-contenido">
                 <?php the_content(); ?>
             </div>
         </div>
@@ -30,18 +30,31 @@
 
     <?php if(in_category('proyecto')) : ?>
         <div class="row">
-            <div class="col-lg-6 post-informacion">
+            <div class="col-6 post-informacion">
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?> on <?php the_category('-'); ?></small>
             </div>
 
-            <div class="col-lg-6 post-contenido">
+            <div class="col-6 post-contenido">
+                <?php the_content(); ?>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <?php if(in_category('uncategorized')) : ?>
+        <div class="row">
+            <div class="col-6 post-informacion">
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                <small><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?> on <?php the_category('-'); ?></small>
+            </div>
+
+            <div class="col-6 post-contenido">
                 <?php the_content(); ?>
             </div>
         </div>
     <?php endif; ?>
     </article>
 
-    <div class="col-lg-12">
+    <div class="col-12">
     <div class="separator"></div>
 </div>

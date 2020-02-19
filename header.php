@@ -12,7 +12,7 @@
 <body <?php body_class(); ?>>
     <div class="container-fluid principal">
         <div class="row">
-            <div class="col-lg-3 main-div-section">
+            <div class="col-3 main-div-section">
                 <header style="background-image: url('<?php echo get_theme_mod('header_image'); ?>');" 
                                                 class="text-center d-flex justify-content-center flex-column">
                     <div class="img-perfil">
@@ -33,5 +33,5 @@
                     </footer>
                 </header>
             </div>
-            <div class="main col-lg-9">
+            <div class="main col-9">
                 <div class="main-contenido">
