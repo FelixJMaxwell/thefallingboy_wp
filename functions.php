@@ -23,7 +23,7 @@ function tfb_scripts_styles(){
     wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googleFont'), '1.0.0');
 }
 
-add_action('wp_enqueue_scripts', 'tfb_scripts_styles',);
+add_action('wp_enqueue_scripts', 'tfb_scripts_styles');
 
 
 

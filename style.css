@@ -126,18 +126,6 @@ header img {
   height: 100%;
 }
 
-.main-contenido .post-textos-single,
-.main-contenido .post-uncategorized-single {
-  height: 100%;
-}
-
-.main-contenido .post-textos-single .row-text-post-single,
-.main-contenido .post-textos-single .row-uncategorized-post-single,
-.main-contenido .post-uncategorized-single .row-text-post-single,
-.main-contenido .post-uncategorized-single .row-uncategorized-post-single {
-  height: 100%;
-}
-
 .pagina-principal {
   height: 100%;
   width: 100%;
@@ -166,7 +154,8 @@ header img {
 .category-imagenes,
 .category-proyectos,
 .category-uncategorized,
-.category-proyecto {
+.category-proyecto,
+.category-video {
   height: 100%;
 }
 
@@ -174,7 +163,8 @@ header img {
 .category-imagenes .post-informacion,
 .category-proyectos .post-informacion,
 .category-uncategorized .post-informacion,
-.category-proyecto .post-informacion {
+.category-proyecto .post-informacion,
+.category-video .post-informacion {
   text-align: right;
   padding: 35px 10px 0 0;
   background-color: rgba(177, 177, 177, 0.5);
@@ -184,7 +174,8 @@ header img {
 .category-imagenes .post-informacion .posicion-informacion,
 .category-proyectos .post-informacion .posicion-informacion,
 .category-uncategorized .post-informacion .posicion-informacion,
-.category-proyecto .post-informacion .posicion-informacion {
+.category-proyecto .post-informacion .posicion-informacion,
+.category-video .post-informacion .posicion-informacion {
   position: fixed;
   left: 42%;
   -webkit-transform: translateX(-50%);
@@ -195,10 +186,43 @@ header img {
 .category-imagenes .post-contenido,
 .category-proyectos .post-contenido,
 .category-uncategorized .post-contenido,
-.category-proyecto .post-contenido {
+.category-proyecto .post-contenido,
+.category-video .post-contenido {
   text-align: left;
   padding: 35px 50px 35px 10px;
   background-color: rgba(61, 61, 61, 0.75);
+}
+
+.category-textos iframe,
+.category-imagenes iframe,
+.category-proyectos iframe,
+.category-uncategorized iframe,
+.category-proyecto iframe,
+.category-video iframe {
+  width: 100%;
+}
+
+.post-textos-single,
+.post-uncategorized-single,
+.post-proyecto-single {
+  height: 100%;
+}
+
+.post-textos-single .row-text-post-single,
+.post-textos-single .row-uncategorized-post-single,
+.post-textos-single .row-proyecto-post-single,
+.post-uncategorized-single .row-text-post-single,
+.post-uncategorized-single .row-uncategorized-post-single,
+.post-uncategorized-single .row-proyecto-post-single,
+.post-proyecto-single .row-text-post-single,
+.post-proyecto-single .row-uncategorized-post-single,
+.post-proyecto-single .row-proyecto-post-single {
+  height: 100%;
+}
+
+.post-imagenes-alone {
+  width: 100%;
+  height: 100%;
 }
 
 .site-footer {

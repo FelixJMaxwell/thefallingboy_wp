@@ -130,16 +130,6 @@ header img{
 
 .main-contenido{
     height: 100%;
-
-    .post-textos-single,
-    .post-uncategorized-single{
-        height: 100%;
-        
-        .row-text-post-single,
-        .row-uncategorized-post-single{
-            height: 100%;
-        }
-    }
 }
 
 .pagina-principal{
@@ -167,7 +157,8 @@ header img{
 .category-imagenes,
 .category-proyectos,
 .category-uncategorized,
-.category-proyecto{
+.category-proyecto,
+.category-video{
     height: 100%;
 
     .post-informacion{
@@ -185,6 +176,27 @@ header img{
         padding: 35px 50px 35px 10px;
         background-color: rgba(61, 61, 61, 0.75);
     }
+
+    iframe{
+        width: 100%;
+    } 
+}
+
+.post-textos-single,
+    .post-uncategorized-single,
+    .post-proyecto-single{
+        height: 100%;
+        
+        .row-text-post-single,
+        .row-uncategorized-post-single,
+        .row-proyecto-post-single{
+            height: 100%;
+        }
+    }
+
+.post-imagenes-alone{
+    width: 100%;
+    height: 100%;
 }
 
 .site-footer{

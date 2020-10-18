@@ -20,7 +20,7 @@
 					'post_status' => 'publish',
 					'ignore_sticky_posts' => true,
 					//'category_name' => 'imagenes',
-					'order' => 'DESC', // 'ASC'
+					'order' => 'DESC', // 'ASC'  'DESC'
 					'orderby' => 'date' // modified | title | name | ID | rand
 				);
 
